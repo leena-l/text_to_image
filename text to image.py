@@ -5,15 +5,15 @@ os.system('pip install diffusers transformers torch accelerate')
 import torch
 from diffusers import StableDiffusionPipeline
 
-# Check if GPU is available, otherwise use CPU
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# Load the pre-trained Stable Diffusion model from Hugging Face
+# pre-trained Stable Diffusion model from Hugging Face
 model_id = "runwayml/stable-diffusion-v1-5"
 pipe = StableDiffusionPipeline.from_pretrained(model_id)
 pipe = pipe.to(device)
+s
 
-# Function to generate an image
 def generate_image(prompt, output_path="generated_image.png"):
     
     if device == "cuda":
@@ -33,5 +33,6 @@ def generate_image(prompt, output_path="generated_image.png"):
 
 prompt = "A futuristic city with flying cars and neon lights"
 generate_image(prompt)
+
 
 
