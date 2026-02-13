@@ -27,7 +27,11 @@ def generate_image(prompt, output_path="generated_image.png"):
     image.save(output_path)
     print(f"Image saved to {output_path}")
 
-# Example usage:
+
+
+
+
 prompt = "A futuristic city with flying cars and neon lights"
 generate_image(prompt)
+
 
